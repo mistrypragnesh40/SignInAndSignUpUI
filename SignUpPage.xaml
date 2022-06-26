@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SignInAndSignUpUI.SignUpPage"
+             xmlns:handless="clr-namespace:SignInAndSignUpUI.Handlers"
+             Shell.NavBarIsVisible="False"
+             Title="SignUpPage">
+    <Grid RowDefinitions="1*,8*,1*">
+        <Frame BackgroundColor="#cfd0d8" Grid.Row="0" HorizontalOptions="EndAndExpand"
+               Padding="0" 
+               Margin="0,-80,-80,0"
+               HeightRequest="250"
+               WidthRequest="250" CornerRadius="125">
+
+        </Frame>
+
+        <Frame BackgroundColor="{x:StaticResource Primary}" Grid.Row="0" HorizontalOptions="EndAndExpand"
+               Padding="0" 
+               Margin="0,-120,-120,0"
+               HeightRequest="250"
+               WidthRequest="250" CornerRadius="125">
+
+        </Frame>
+
+        <Frame ZIndex="1" CornerRadius="0" BackgroundColor="{x:StaticResource DashboardBackground}"
+               Grid.Row="1" VerticalOptions="CenterAndExpand"
+               Margin="0,0,40,0"
+               >
+            <ScrollView>
+                <VerticalStackLayout Spacing="25">
+                    <Label Text="SIGN IN" FontSize="28" FontAttributes="Bold" />
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                            <Image VerticalOptions="Center" Source="user.png" HeightRequest="25" WidthRequest="25" />
+                            <handless:BorderlessEntry VerticalOptions="Center" Placeholder="Name" Grid.Column="1" />
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                            <Image VerticalOptions="Center" Source="email.png" HeightRequest="25" WidthRequest="25" />
+                            <handless:BorderlessEntry VerticalOptions="Center" Placeholder="Email" Grid.Column="1" />
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                            <Image VerticalOptions="Center" Source="mobile.png" HeightRequest="25" WidthRequest="25" />
+                            <handless:BorderlessEntry VerticalOptions="Center" Placeholder="Mobile Number" Grid.Column="1" />
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                            <Image VerticalOptions="Center" Source="password.png" HeightRequest="25" WidthRequest="25" />
+                            <handless:BorderlessEntry VerticalOptions="Center" Placeholder="Password" IsPassword="True" Grid.Column="1" />
+                        </Grid>
+                    </Frame>
+
+                    <Button CornerRadius="0" HeightRequest="60" Text="SIGN UP" FontSize="20" FontAttributes="Bold" />
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label  FontAttributes="Bold" TextColor="Gray" Text="already have a account?" VerticalTextAlignment="Center" />
+                        <Label  Text="SIGN IN" FontSize="18" 
+                           FontAttributes="Bold"
+                           TextColor="{x:StaticResource Primary}" />
+                        <HorizontalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_For_SignIn" />
+                        </HorizontalStackLayout.GestureRecognizers>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </ScrollView>
+        </Frame>
+
+        <Frame BackgroundColor="#cfd0d8" Grid.Row="2" 
+               VerticalOptions="EndAndExpand"
+               HorizontalOptions="StartAndExpand"
+               Padding="0" 
+               Margin="0,0,0,-180"
+               HeightRequest="250"
+               WidthRequest="250" CornerRadius="125">
+
+        </Frame>
+
+        <Frame BackgroundColor="{x:StaticResource Primary}" 
+               VerticalOptions="EndAndExpand"
+               Grid.Row="2" 
+               HorizontalOptions="StartAndExpand"
+               Padding="0" 
+               Margin="0,0,0,-200"
+               HeightRequest="250"
+               WidthRequest="250" CornerRadius="125">
+
+        </Frame>
+
+    </Grid>
+</ContentPage>
